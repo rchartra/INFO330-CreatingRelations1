@@ -1,0 +1,2 @@
+CREATE TABLE registrations (studentid INT, course VARCHAR(40) CHECK (length(course) > 6), grade REAL DEFAULT NULL, FOREIGN KEY (studentid) REFERENCES students(id), FOREIGN KEY (course) REFERENCES courses(code));
+INSERT INTO registrations (studentid, course) VALUES (1, 'INFO330A'), (1, 'INFO448A'), (1, 'INFO314'), (3, 'INFO330A'), (3, 'INFO449A'), (2, 'BAW0100'), (2, 'BAW100A'), (4, 'BAW0100');
